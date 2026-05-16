@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S3 Embroidery | Fine Artisan Threadwork</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="particle-container" id="particles"></div>
+
+  <nav>
+    <a href="#" class="nav-logo">S3 <span>E&T</span></a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#catalog">Catalog</a></li>
+      <li><a href="#customize">Request Design</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#feedback">Feedback</a></li>
+    </ul>
+    <div style="display:flex; gap:0.5rem; align-items:center;">
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <button class="theme-btn" id="themeToggle">
+        <svg id="themeIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="1.5">
+          <circle cx="12" cy="12" r="5" />
+          <path
+            d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <div class="sidebar" id="sidebar">
+    <a href="#services" data-sidebar-link>Services</a>
+    <a href="#gallery" data-sidebar-link>Gallery</a>
+    <a href="#catalog" data-sidebar-link>Catalog</a>
+    <a href="#customize" data-sidebar-link>Request Design</a>
+    <a href="#contact" data-sidebar-link>Contact</a>
+    <a href="#feedback" data-sidebar-link>Feedback</a>
+  </div>
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">Embroidery and Tailoring</div>
+      <h1 class="hero-title">Crafted to be<br>Beautifully <em>You</em></h1>
+      <p class="hero-desc">Handcrafted and computerized embroidery, maggam work,
+        and fine tailoring — because everyone deserves to wear something
+        beautifully made.</p>
+      <div class="btn-group">
+        <a href="#customize" class="btn btn-primary">Custom Order</a>
+        <a href="#gallery" class="btn btn-secondary">View Work</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="section-header">
+      <h2 class="section-title">The Services</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal-left delay-1">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M2 18h20M5 18V7a2 2 0 012-2h10a2 2 0 012 2v11M8 5V3m8 2V3M12 10v4m-2-2h4" />
+        </svg>
+        <h3>Computerized Embroidery</h3>
+        <p>
+          Precision computerized embroidery for blouse designs, elegant patterns, names, logos,
+          and detailed decorative work crafted with flawless precision.
+        </p>
+      </div>
+      <div class="service-card reveal delay-2">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <circle cx="12" cy="12" r="9" />
+          <path d="M12 3v18M3 12h18" />
+          <path d="M16 8l-8 8m0-8l8 8" />
+        </svg>
+        <h3>Maggam Work</h3>
+        <p>
+          Traditional handcrafted Maggam, Aari, and Zardozi work featuring intricate zari, bead,
+          and stone detailing — specially crafted for bridal and festive blouses.
+        </p>
+      </div>
+      <div class="service-card reveal-right delay-3">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M4 7h16M4 12h10M4 17h7M16 15l3 3 3-3" />
+        </svg>
+        <h3>Personalization</h3>
+        <p>Custom names, initials, and jersey numbering on T-shirts, hoodies, and corporate apparel.</p>
+      </div>
+      <div class="service-card reveal delay-4">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-14v14m0-14L4 7m0 0v10l8 4" />
+        </svg>
+        <h3>Material Sourcing</h3>
+        <p>We supply high-quality base fabrics, T-shirts, and blouse materials if you don't have your own.</p>
+      </div>
+
+
+      <div class="service-card reveal delay-5">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M6 2h12l3 7H3L6 2zM3 9v11a2 2 0 002 2h14a2 2 0 002-2V9" />
+          <path d="M12 13v6M9 16h6" />
+        </svg>
+        <h3>Tailoring</h3>
+        <p>Custom stitching and alterations for blouses, salwars, and garments —
+          tailored to your exact measurements and style.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="section-header">
+      <h2 class="section-title">The Portfolio</h2>
+    </div>
+    <div class="gallery-grid">
+      <!-- 1. Large Square -->
+      <div class="gallery-item gi-large reveal-scale delay-1">
+        <img src="images/image_ea2327a3.png">
+      </div>
+      <!-- 2. Wide Rectangle -->
+      <div class="gallery-item gi-wide reveal-scale delay-2">
+        <img src="images/image_2fe21558.png">
+      </div>
+      <!-- 3. Normal Square -->
+      <div class="gallery-item reveal-scale delay-3">
+        <img src="images/image_4cdffeac.png">
+      </div>
+      <!-- 4. Tall Rectangle -->
+      <div class="gallery-item gi-tall reveal-scale delay-4">
+        <img src="images/image_7c1aa098.png">
+      </div>
+      <!-- 5. Normal Square -->
+      <div class="gallery-item reveal-scale delay-5">
+        <img src="images/image_a45cd1ec.png">
+      </div>
+      <!-- 6. Wide Rectangle -->
+      <div class="gallery-item gi-wide reveal-scale delay-6">
+        <img src="images/image_3119d235.png">
+      </div>
+      <!-- 7. Tall Rectangle -->
+      <div class="gallery-item gi-tall reveal-scale delay-1">
+        <img src="images/image_dfe803ca.png">
+      </div>
+      <!-- 8. Normal Square -->
+      <div class="gallery-item reveal-scale delay-2">
+        <img src="images/image_e28edbe0.png">
+      </div>
+
+      <div class="gallery-item gi-large reveal-scale delay-4">
+        <img src="images/Max_a_Transform_this_origi.png">
+      </div>
+
+      <!-- 10. Large Square (beside items 8 & 9) -->
+      <div class="gallery-item reveal-scale delay-3" data-title="Your Title Here">
+        <img src="images/image_16b43f8d.png">
+      </div>
+
+
+
+    </div>
+  </section>
+
+  <section id="catalog">
+    <div class="section-header">
+      <h2 class="section-title">Blouse Design Catalog</h2>
+      <p style="max-width:600px;margin:1rem auto;color:var(--text-muted);">
+        Select a category → choose a design file → share the PDF name or screenshot with us to order.
+      </p>
+    </div>
+    <div class="catalog-grid">
+      <div class="catalog-category">
+        <div class="catalog-card reveal delay-1" onclick="toggleCategory('cat1')">
+          <span>Bridal Designs</span>
+        </div>
+        <div class="pdf-list" id="cat1">
+          <a href="pdfs\set B 20 des 1000rs......pdf" target="_blank">Bridal Designs 1</a>
+          <a href="pdfs\30 des nov.....pdf" target="_blank">Bridal Designs 2</a>
+          <a href="pdfs\30 des 300rs.....pdf" target="_blank">Bridal Designs 3</a>
+          <a href="pdfs\set B 20 des 1000rs......pdf" target="_blank">Bridal Designs 4</a>
+          <a href="pdfs\april 2022.pdf" target="_blank">Bridal Design 5</a>
+          <a href="pdfs\1001 - 1200.pdf" target="_blank">Bridal Design 6</a>
+        </div>
+      </div>
+      <div class="catalog-category">
+        <div class="catalog-card reveal delay-2" onclick="toggleCategory('cat2')">
+          <span>Simple Designs</span>
+        </div>
+        <div class="pdf-list" id="cat2">
+          <a href="pdfs\set C 20 des 1000rs.....pdf" target="_blank">Simple Design 1</a>
+          <a href="pdfs\set A 20 des 1000rs....pdf" target="_blank">Simple Design 2</a>
+          <a href="pdfs\VN50 DES.pdf" target="_blank">Simple Design 3</a>
+          <a href="pdfs\401-500.pdf" target="_blank">Simple Design 4</a>
+          <a href="pdfs\101-200.pdf" target="_blank">Simple Design 5</a>
+          <a href="pdfs\1-100.pdf" target="_blank">Simple Design 6</a>
+
+        </div>
+      </div>
+      <div class="catalog-category">
+        <div class="catalog-card reveal delay-3" onclick="toggleCategory('cat3')">
+          <span>Heavy Work</span>
+        </div>
+        <div class="pdf-list" id="cat3">
+          <a href="pdfs\Angel 931 to 940 whatsapp no+91 8121155564.pdf" target="_blank">Heavy Design 1</a>
+          <a href="pdfs\Angel cutwork 981 to 990_241018_215602.pdf" target="_blank">Heavy Design 2</a>
+          <a href="pdfs\ASHADAM 2024 OFFER PACK.pdf" target="_blank">Heavy Design 3</a>
+          <a href="pdfs\CHRISTMAS 2023 offer pack_241015_210605.pdf" target="_blank">Heavy Design 4</a>
+          <a href="pdfs\1601 - 1800.pdf" target="_blank">Heavy Design 5</a>
+        </div>
+      </div>
+      <div class="catalog-category">
+        <div class="catalog-card reveal delay-4" onclick="toggleCategory('cat4')">
+          <span>Modern Patterns</span>
+        </div>
+        <div class="pdf-list" id="cat4">
+          <a href="pdfs\OD  SET 32.pdf" target="_blank">Modern Design 1</a>
+          <a href="pdfs\OD SET 33.pdf" target="_blank">Modern Design 2</a>
+          <a href="pdfs\OD SET 34.pdf" target="_blank">Modern Design 3</a>
+          <a href="pdfs\OD SET 35.pdf" target="_blank">Modern Design 4</a>
+          <a href="pdfs\OD SET38.pdf" target="_blank">Modern Design 5</a>
+          <a href="pdfs\OD SET39.pdf" target="_blank">Modern Design 6</a>
+          <a href="pdfs\OD SET40.pdf" target="_blank">Modern Design 7</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="customize">
+    <div class="section-header">
+      <h2 class="section-title">Order Inquiry</h2>
+    </div>
+    <div class="form-container reveal">
+      <div>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">Please provide details about your design requirements.
+          We will contact you with a quote within 24 hours.</p>
+        <div class="form-group">
+          <label>Service Type</label>
+          <select>
+            <option>Machine Embroidery</option>
+            <option>Maggam Work</option>
+            <option>Custom Personalization</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Quantity</label>
+          <input type="number" placeholder="1">
+        </div>
+      </div>
+      <div>
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" placeholder="Your Name">
+        </div>
+        <div class="form-group">
+          <label>Phone / WhatsApp</label>
+          <input type="tel" placeholder="+91">
+        </div>
+        <div class="form-group">
+          <label>Design Notes</label>
+
+          <textarea rows="4" placeholder="Describe the pattern, colors, and placement..."></textarea>
+
+          <p class="order-instruction">
+            If you selected a design from the Blouse Design Catalog, please mention:
+            <br>
+            <strong>Category Name + Design Number</strong>
+            <br>
+            Example: <em>Heavy Work, Heavy Design 2</em>
+            <br><br>
+            We will contact you for further details and customization.
+          </p>
+        </div>
+        <!-- <div class="form-group">
+          <label>Reference Photos (optional)</label>
+          <div class="upload-area" id="uploadArea">
+            <input type="file" id="photoUpload" accept="image/*" multiple hidden>
+            <div class="upload-placeholder" id="uploadPlaceholder">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                <polyline points="17 8 12 3 7 8" />
+                <line x1="12" y1="3" x2="12" y2="15" />
+              </svg>
+              <p>Click or drag photos here</p>
+              <span>PNG, JPG, WEBP up to 5MB each</span>
+            </div>
+            <div class="preview-grid" id="previewGrid"></div>
+          </div>
+        </div> -->
+        <button class="btn btn-primary" id="submitBtn" style="width: 100%;">Submit Inquiry</button>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="contact">
+    <div class="section-header">
+      <h2 class="section-title">Find Us</h2>
+    </div>
+    <div class="contact-grid reveal">
+      <div class="contact-info">
+        <div class="contact-item">
+          <i data-lucide="map-pin"></i>
+          <div>
+            <strong>Address</strong>
+            <p>Near Bondapalli police station, Bondapalli Mandalam, Vizianagaram District<br>Andhra Pradesh, India –
+              535260</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i data-lucide="phone"></i>
+          <div>
+            <strong>Phone / WhatsApp</strong>
+            <p><a href="tel:+919959036013">+91 99590 36013</a></p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i data-lucide="mail"></i>
+          <div>
+            <strong>Email</strong>
+            <p><a href="mailto:kasireddysaishruthi2003@gmail.com">kasireddysaishruthi2003@gmail.com</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="contact-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d470.6710945716464!2d83.33680222977239!3d18.256347646171772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3bec788e12e7d5%3A0x63a5ae61d4b5b82c!2sPolice%20Station!5e0!3m2!1sen!2sin!4v1778339043910!5m2!1sen!2sin"
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="feedback">
+    <div class="section-header">
+      <h2 class="section-title">Share Your Experience</h2>
+    </div>
+    <div class="form-container reveal">
+      <div>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">
+          We'd love to hear about your experience with Shruthi Embroidery.
+        </p>
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" id="feedbackName" placeholder="Your Name">
+        </div>
+        <div class="form-group">
+          <label>Rating</label>
+          <div class="star-rating" id="starRating">
+            <span data-value="1">★</span>
+            <span data-value="2">★</span>
+            <span data-value="3">★</span>
+            <span data-value="4">★</span>
+            <span data-value="5">★</span>
+          </div>
+          <input type="hidden" id="feedbackRating" value="0">
+        </div>
+      </div>
+      <div>
+        <div class="form-group">
+          <label>Your Feedback</label>
+          <textarea rows="4" id="feedbackText" placeholder="Tell us about your order experience..."></textarea>
+        </div>
+        <button class="btn btn-primary" id="feedbackBtn" style="width:100%;">Submit Feedback</button>
+        <p class="feedback-success" id="feedbackSuccess">Thank you for your feedback! 🌸</p>
+
+      </div>
+    </div>
+    <p class="feedback-wall-title">What our customers say</p>
+    <!-- Feedback Display Area — outside the 2-col grid -->
+    <div class="feedback-wall" id="feedbackWall"></div>
+  </section>
+
+  <footer>
+    <div class="nav-logo" style="margin-bottom: 1rem; font-size: 18px;">S3 E&T</div>
+    <div class="footer-contact">
+      <a href="https://instagram.com/yourusername" target="_blank" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="3" y="3" width="18" height="18" rx="5" />
+          <circle cx="12" cy="12" r="4" />
+          <circle cx="17" cy="7" r="1" />
+        </svg>
+      </a>
+<a href="https://pinterest.com/yourusername" target="_blank" aria-label="Pinterest">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+    <path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.77 1.22-5.17 1.22-5.17s-.31-.62-.31-1.55c0-1.45.84-2.54 1.89-2.54.89 0 1.32.67 1.32 1.47 0 .9-.57 2.24-.87 3.48-.25 1.04.52 1.88 1.54 1.88 1.85 0 3.09-2.37 3.09-5.18 0-2.14-1.44-3.64-3.5-3.64-2.38 0-3.78 1.79-3.78 3.63 0 .72.28 1.49.62 1.91.07.08.08.15.06.24-.06.26-.2.84-.23.95-.04.15-.13.18-.3.11-1.12-.52-1.82-2.17-1.82-3.49 0-2.84 2.06-5.44 5.94-5.44 3.12 0 5.54 2.22 5.54 5.19 0 3.1-1.95 5.59-4.66 5.59-.91 0-1.77-.47-2.06-1.03l-.56 2.09c-.2.78-.75 1.76-1.12 2.35.84.26 1.73.4 2.65.4 5.52 0 10-4.48 10-10S17.52 2 12 2z"/>
+  </svg>
+</a>
+      <a href="tel:+919959036013" aria-label="Call">
+        <i data-lucide="phone"></i>
+      </a>
+      <a href="mailto:kasireddysaishruthi2003@gmail.com" aria-label="Email">
+        <i data-lucide="mail"></i>
+      </a>
+    </div>
+    <p class="footer-copy">© 2026 S3 E&T • Bondapalli, Vizianagaram • Andhra Pradesh</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+
+  <!-- Floating WhatsApp Button -->
+  <a class="whatsapp-float" href="https://wa.me/919959036013" target="_blank" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.18-1.57A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 21.87a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.73.95.98-3.62-.23-.37A9.87 9.87 0 0 1 2.13 12C2.13 6.54 6.54 2.13 12 2.13A9.87 9.87 0 0 1 21.87 12c0 5.46-4.41 9.87-9.87 9.87zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15s-.77.97-.94 1.17c-.17.2-.35.22-.65.07a8.17 8.17 0 0 1-2.4-1.48 9 9 0 0 1-1.66-2.07c-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.91-2.2-.24-.57-.48-.5-.67-.5h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z" />
+    </svg>
+    <span>Chat with us</span>
+  </a>
+
+</body>
+
+</html>
